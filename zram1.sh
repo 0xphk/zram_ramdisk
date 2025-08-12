@@ -1,0 +1,1 @@
+/home/phk/bin/zram1.sh
