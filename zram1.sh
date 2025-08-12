@@ -112,7 +112,7 @@ if zramctl /dev/zram1 --size="$SIZE"; then
   sleep 1
   DEV=1
   dmesg -T | grep zram1 | tail -1 | awk '{print "      " $0}'; sleep 2
-  # verify if device is present, should list DISKSIZE 32G
+  # verify if device is present, should list DISKSIZE $SIZE
   echo -e "\n$OK[INF]$RST size $SIZE successfully set\n"
   zramctl /dev/zram1 | grep --color=auto -B1 "$SIZE" | awk '{print "      " $0}'; sleep 1
   echo ""
